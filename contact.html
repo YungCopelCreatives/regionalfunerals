@@ -23,13 +23,13 @@
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(139, 69, 19, 0.1);
+            box-shadow: 0 5px 20px rgba(31, 105, 196, 0.1);
             transition: all 0.3s ease;
         }
         
         .contact-box:hover {
             transform: translateY(-5px);
-            background: var(--primary-brown);
+            background: var(--primary-blue);
             color: white;
         }
         
@@ -82,7 +82,7 @@
             display: flex;
             align-items: center;
             margin: 12px 0;
-            color: var(--secondary-brown);
+            color: var(--dark-brown);
         }
 
         .contact-item i {
@@ -106,18 +106,24 @@
 
         .contact-form input,
         .contact-form textarea {
-            padding: 12px 15px;
-            border: 2px solid var(--light-brown);
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: var(--accent-blue);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        .contact-form button {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #155a8a;
         }
 
         .map-box {
