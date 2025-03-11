@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>Services - Regional Funerals</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .service-section {
+            padding: 100px 0 60px;
+            background: linear-gradient(to bottom, var(--bg-cream) 0%, #fff 100%);
+        }
+
+        .features-small-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(139, 69, 19, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            border: 1px solid rgba(139, 69, 19, 0.1);
+            cursor: pointer;
+        }
+
+        .features-small-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15);
+        }
+
+        .features-small-item.expanded {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.2);
+            border-color: var(--primary-brown);
+        }
+
+        .features-small-item .icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
+            background: var(--bg-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .features-small-item:hover .icon {
+            background: var(--light-brown);
+        }
+
+        .features-small-item .icon img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .features-title {
+            font-size: 1.3rem;
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .features-small-item p {
+            color: var(--secondary-brown);
+            text-align: center;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 0 15px;
+        }
+
+        .section-header h2 {
+            color: var(--dark-brown);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--secondary-brown);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .features-small-item {
+                padding: 20px;
+            }
+
+            .features-title {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav" style="display: flex; justify-content: center; align-items: center;">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo-1.png" alt="Regional Funerals" />
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="index.html#welcome">Home</a></li>
+                            <li><a href="index.html#features">About</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="services.html" class="active">Services</a></li>
+                            <li><a href="burial_schemes.html">Burial Schemes</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="service-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive funeral services delivered with dignity and compassion</p>
+            </div>
+
+            <div class="row">
+                <!-- Service 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12" onclick="toggleExpand(this)">
+                    <div class="features-small-item">
+                        <div class="icon">
+                            <i><img src="assets/images/service-removal.png" alt="Body Removal"></i>
+                        </div>
+                        <h5 class="features-title">Body Removals & Storage</h5>
+                        <p>Professional and dignified collection service with secure storage facilities.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12" onclick="toggleExpand(this)">
+                    <div class="features-small-item">
+                        <div class="icon">
+                            <i><img src="assets/images/service-funeral.png" alt="Funeral Services"></i>
+                        </div>
+                        <h5 class="features-title">Funeral Services</h5>
+                        <p>Complete funeral arrangements handled with care and professionalism.</p>
+                    </div>
+                </div>
+
+                <!-- Continue with other services using the same structure -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12" onclick="toggleExpand(this)">
+                    <div class="features-small-item">
+                        <div class="icon">
+                            <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                        </div>
+                        <h5 class="features-title">Transportation Options</h5>
+                        <p>Choose from a Four-Seater, Seven-Seater, Toyota Quantum, Toyota Hiace, or a Twenty-Two-Seater vehicle for dignified funeral transportation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12" onclick="toggleExpand(this)">
+                    <div class="features-small-item">
+                        <div class="icon">
+                            <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                        </div>
+                        <h5 class="features-title">Documentation</h5>
+                        <p>We assist with obtaining death certificates, burial orders, repatriation permits, and grave bookings.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12" onclick="toggleExpand(this)">
+                    <div class="features-small-item">
+                        <div class="icon">
+                            <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                        </div>
+                        <h5 class="features-title">Basic Service</h5>
+                        <p>Our basic funeral service includes preparation of the deceased, disinfection, dressing, and coffining.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12" onclick="toggleExpand(this)">
+                    <div class="features-small-item">
+                        <div class="icon">
+                            <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                        </div>
+                        <h5 class="features-title">Consultation</h5>
+                        <p>We provide expert advice to guide you through funeral arrangements with care and professionalism.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleExpand(element) {
+            const items = document.querySelectorAll('.features-small-item');
+            items.forEach(item => {
+                item.classList.remove('expanded');
+            });
+            element.querySelector('.features-small-item').classList.toggle('expanded');
+        }
+    </script>
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Logo and About -->
+                <div class="col-lg-3 col-md-6">
+                    <img src="assets/images/logo-light.png" alt="Regional Funerals" class="footer-logo">
+                    <p>Providing dignified funeral services with care and compassion since 2010.</p>
+                    <p class="fsp-notice">Regional Funerals is an authorised financial services provider with FSP No. 52758.</p>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h4>Quick Links</h4>
+                    <ul class="quick-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="burial_schemes.html">Burial Schemes</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa fa-map-marker"></i> 76 Alexander Street<br>Berea, Johannesburg</li>
+                        <li><i class="fa fa-phone"></i> +27 11 234 5678</li>
+                        <li><i class="fa fa-envelope"></i> info@regionalfunerals.co.za</li>
+                        <li><i class="fa fa-clock-o"></i> Available 24/7</li>
+                    </ul>
+                </div>
+    
+                <!-- Social Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h4>Connect With Us</h4>
+                    <p>Follow us on social media for updates and information.</p>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>© 2024 Regional Funerals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

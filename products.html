@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="High-quality caskets and coffins by Regional Funerals">
+    <meta name="author" content="Regional Funerals">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>Products - Regional Funerals</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 40px 0;
+        }
+        
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        
+        .product-details {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #1e1e1e;
+        }
+        
+        .learn-more-btn {
+            background: #8B4513;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .learn-more-btn:hover {
+            background: #6B3410;
+        }
+        
+        .product-description {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f8f8;
+            border-radius: 5px;
+        }
+        
+        .product-description.active {
+            display: block;
+        }
+
+        @media (max-width: 992px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav" style="display: flex; justify-content: center; align-items: center;">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo-1.png" alt="Regional Funerals" />
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="index.html#welcome">Home</a></li>
+                            <li><a href="index.html#features">About</a></li>
+                            <li><a href="products.html" class="active">Products</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="burial_schemes.html">Burial Schemes</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <section class="section" style="margin-top: 100px;">
+        <div class="container">
+            <div class="center-heading">
+                <h2 class="section-title">Our Products</h2>
+                <p>Browse our selection of high-quality caskets and coffins</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="image-container">
+                        <div class="scrollable-images">
+                            <img src="assets/images/velvet_casket.jpg" alt="Velvet Casket" class="product-image">
+                            <img src="assets/images/velvet_casket_open.jpg" alt="Velvet Casket Side View" class="product-image">
+                        </div>
+                        <div class="arrow left-arrow" onclick="scrollImages(this, -1)">&#10094;</div>
+                        <div class="arrow right-arrow" onclick="scrollImages(this, 1)">&#10095;</div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Velvet Casket</h3>
+                        <button type="button" class="learn-more-btn" onclick="toggleDescription(1)">Learn More</button>
+                        <div id="description-1" class="product-description">
+                            <p>Elegant velvet casket with premium finish and luxurious interior.</p>
+                            <ul style="text-align: left; margin-top: 10px;">
+                                <li>Premium velvet fabric</li>
+                                <li>Luxurious interior</li>
+                                <li>Brass hardware</li>
+                            </ul>
+                            <a href="contact.html" class="learn-more-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" id="dome-casket">
+                    <div class="image-container">
+                        <div class="scrollable-images">
+                            <img src="assets/images/dome_casket.jpg" alt="Dome Casket" class="product-image">
+                            <img src="assets/images/dome_casket_2.jpg" alt="Dome Casket Side View" class="product-image">
+                        </div>
+                        <div class="arrow left-arrow" onclick="scrollImages(this, -1)">&#10094;</div>
+                        <div class="arrow right-arrow" onclick="scrollImages(this, 1)">&#10095;</div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Dome Casket</h3>
+                        <button class="learn-more-btn" onclick="toggleDescription(2)">Learn More</button>
+                        <div id="description-2" class="product-description">
+                            <p>Traditional dome casket with classic styling and comfortable interior.</p>
+                            <ul class="product-features">
+                                <li>✓ Solid wood construction</li>
+                                <li>✓ Satin interior</li>
+                                <li>✓ Traditional design</li>
+                            </ul>
+                            <a href="contact.html" class="learn-more-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="assets/images/mini_dome_casket.jpg" alt="Mini Dome Casket" class="product-image">
+                    <div class="product-details">
+                        <h3 class="product-title">Mini Dome Casket</h3>
+                        <button class="learn-more-btn" onclick="toggleDescription(3)">Learn More</button>
+                        <div id="description-3" class="product-description">
+                            <p>Compact mini dome casket with elegant design.</p>
+                            <ul class="product-features">
+                                <li>Miniature size</li>
+                                <li>Luxurious finish</li>
+                                <li>Comfortable interior</li>
+                            </ul>
+                            <a href="contact.html" class="learn-more-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="assets/images/single_decker_casket.jpg" alt="Single Decker Casket" class="product-image">
+                    <div class="product-details">
+                        <h3 class="product-title">Single Decker Casket</h3>
+                        <button class="learn-more-btn" onclick="toggleDescription(4)">Learn More</button>
+                        <div id="description-4" class="product-description">
+                            <p>Elegant single decker casket with premium craftsmanship.</p>
+                            <ul class="product-features">
+                                <li>Single deck design</li>
+                                <li>Quality fabric interior</li>
+                                <li>Brass hardware</li>
+                            </ul>
+                            <a href="contact.html" class="learn-more-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="assets/images/budget_casket.jpg" alt="Budget Casket" class="product-image">
+                    <div class="product-details">
+                        <h3 class="product-title">Budget Casket</h3>
+                        <button class="learn-more-btn" onclick="toggleDescription(5)">Learn More</button>
+                        <div id="description-5" class="product-description">
+                            <p>Affordable budget casket with dignified design.</p>
+                            <ul class="product-features">
+                                <li>Cost-effective</li>
+                                <li>Simple interior</li>
+                                <li>Standard hardware</li>
+                            </ul>
+                            <a href="contact.html" class="learn-more-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="assets/images/three_tier_coffin.jpg" alt="Three Tier Coffin" class="product-image">
+                    <div class="product-details">
+                        <h3 class="product-title">Three Tier Coffin</h3>
+                        <button class="learn-more-btn" onclick="toggleDescription(6)">Learn More</button>
+                        <div id="description-6" class="product-description">
+                            <p>Luxurious three tier coffin with elegant design.</p>
+                            <ul class="product-features">
+                                <li>Three tier design</li>
+                                <li>Premium fabric interior</li>
+                                <li>Decorative hardware</li>
+                            </ul>
+                            <a href="contact.html" class="learn-more-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <img src="assets/images/three_tier_coffin.jpg" alt="Raised Open Face Coffin" class="product-image">
+                    <div class="product-details">
+                        <h3 class="product-title">Raised Open Face Coffin</h3>
+                        <button class="learn-more-btn" onclick="toggleDescription(7)">Learn More</button>
+                        <div id="description-7" class="product-description">
+                            <p>Elegant raised open face coffin with luxurious interior.</p>
+                            <ul class="product-features">
+                                <li>Open face design</li>
+                                <li>Quality fabric interior</li>
+                                <li>Brass hardware</li>
+                            </ul>
+                            <a href="contact.html" class="learn-more-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <img src="assets/images/flat_lid_coffin.jpg" alt="Flat Lid Coffin" class="product-image">
+                    <div class="product-details">
+                        <h3 class="product-title">Flat Lid Coffin</h3>
+                        <button class="learn-more-btn" onclick="toggleDescription(8)">Learn More</button>
+                        <div id="description-8" class="product-description">
+                            <p>Simple flat lid coffin with dignified design.</p>
+                            <ul class="product-features">
+                                <li>Flat lid design</li>
+                                <li>Basic interior</li>
+                                <li>Standard hardware</li>
+                            </ul>
+                            <a href="contact.html" class="learn-more-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <img src="assets/images/grain_coffin_open.jpg" alt="Grain Coffin" class="product-image">
+                    <div class="product-details">
+                        <h3 class="product-title">Grain Coffin</h3>
+                        <button class="learn-more-btn" onclick="toggleDescription(9)">Learn More</button>
+                        <div id="description-9" class="product-description">
+                            <p>Beautiful grain coffin with natural finish and quality craftsmanship.</p>
+                            <ul class="product-features">
+                                <li>Grain wood construction</li>
+                                <li>Quality fabric interior</li>
+                                <li>Natural finish</li>
+                            </ul>
+                            <a href="contact.html" class="learn-more-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Logo and About -->
+                <div class="col-lg-3 col-md-6">
+                    <img src="assets/images/logo-1.png" alt="Regional Funerals" class="footer-logo">
+                    <p>Providing dignified funeral services with care and compassion since 2010.</p>
+                    <p class="fsp-notice">Regional Funerals is an authorised financial services provider with FSP No. 52758.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h4>Quick Links</h4>
+                    <ul class="quick-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="burial_schemes.html">Burial Schemes</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa fa-map-marker"></i> 76 Alexander Street<br>Berea, Johannesburg</li>
+                        <li><i class="fa fa-phone"></i> +27 11 234 5678</li>
+                        <li><i class="fa fa-envelope"></i> info@regionalfunerals.co.za</li>
+                        <li><i class="fa fa-clock-o"></i> Available 24/7</li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h4>Connect With Us</h4>
+                    <p>Follow us on social media for updates and information.</p>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>© 2024 Regional Funerals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        function toggleDescription(id) {
+            const description = document.getElementById(`description-${id}`);
+            const allDescriptions = document.querySelectorAll('.product-description');
+            
+            // Close all other descriptions
+            allDescriptions.forEach(desc => {
+                if (desc.id !== `description-${id}`) {
+                    desc.classList.remove('active');
+                }
+            });
+            
+            // Toggle the clicked description
+            description.classList.toggle('active');
+        }
+
+        function scrollImages(element, direction) {
+            const scrollableImages = element.parentElement.querySelector('.scrollable-images');
+            const images = scrollableImages.children;
+            const totalImages = images.length;
+            const scrollAmount = scrollableImages.clientWidth; // Scroll by the width of the container
+
+            // Get the current transform value
+            const currentTransform = getComputedStyle(scrollableImages).transform;
+            const matrix = new DOMMatrix(currentTransform);
+            const currentTranslateX = matrix.m41; // Get the current translateX value
+
+            // Calculate the new translateX value
+            let newTranslateX = currentTranslateX + (direction * scrollAmount);
+
+            // Prevent scrolling beyond the first image
+            if (newTranslateX > 0) {
+                newTranslateX = 0; // Reset to the first image
+            }
+
+            // Prevent scrolling beyond the last image
+            const maxScroll = -((totalImages - 1) * scrollAmount);
+            if (newTranslateX < maxScroll) {
+                newTranslateX = maxScroll; // Reset to the last image
+            }
+
+            // Apply the new transform
+            scrollableImages.style.transform = `translateX(${newTranslateX}px)`;
+        }
+    </script>
+</body>
+</html> 
