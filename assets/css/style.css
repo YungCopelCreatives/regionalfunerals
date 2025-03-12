@@ -122,7 +122,8 @@ body {
   background: #1f6ac7;
   color: #fff;
 }
-#;
+
+
 .section {
   position: relative;
   padding-top: 100px;
@@ -681,7 +682,7 @@ welcome
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../images/banner-bc.png);
+  background-image: url(../images/home.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; 
@@ -820,7 +821,7 @@ features
   margin: auto;
   position: relative;
   margin-bottom: 30px;
-  background: #b7881a;
+  background: #ffffff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -1822,4 +1823,25 @@ preloader
     --secondary-brown: #13518b; /* Updated secondary brown color */
     --accent-blue: #1f69c4; /* Updated accent blue color */
     --bg-cream: #F0F8FF; /* Keep this as is */
+}
+
+.requirements-list {
+    margin-top: 20px;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between items */
+    padding: 10px; /* Padding for each item */
+    background-color: #f8f8f8; /* Light background for each item */
+    border-radius: 5px; /* Rounded corners */
+    width: 90%; /* Set a specific width for the blocks */
+    margin-left: auto; /* Center the blocks */
+    margin-right: auto; /* Center the blocks */
+}
+
+.requirement-item i {
+    color: green; /* Color for the tick icon */
+    margin-right: 10px; /* Space between icon and text */
 }
