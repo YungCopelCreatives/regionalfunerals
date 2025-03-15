@@ -43,25 +43,20 @@ https://templatemo.com/tm-535-softy-pinko
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav" style="display: flex; justify-content: center; align-items: center;">
-                        <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
                             <img src="assets/images/logo-1.png" alt="Regional Funerals" />
                         </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="index.html#welcome" class="active">Home</a></li>
                             <li><a href="index.html#features">About</a></li>
                             <li><a href="products.html">Products</a></li>
                             <li><a href="services.html">Services</a></li>
                             <li><a href="burial_schemes.html">Burial Schemes</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="contacts.html">Contact Us</a></li>
                         </ul>
-
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>  
@@ -125,7 +120,7 @@ https://templatemo.com/tm-535-softy-pinko
                                     <i><img src="assets/images/6416387.gif" alt="Funeral Transportation" style="width: 50px; height: auto; max-width: 100%;"></i>
                                 </div>
                                 <h5 class="features-title">Transportation Options</h5>
-                                <p> Choose from a Four-Seater, Seven-Seater, Toyota Quantum, Toyota Hiace, or a Twenty-Two-Seater vehicle for dignified funeral transportation.</p>
+                                <p> Choose from a Hearse Trailer, Hearse, Family Bus and Toyota Quantum  for dignified funeral transportation.</p>
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
@@ -608,7 +603,7 @@ https://templatemo.com/tm-535-softy-pinko
                         <li><a href="products.html">Products</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="burial_schemes.html">Burial Schemes</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contacts.html">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -632,7 +627,7 @@ https://templatemo.com/tm-535-softy-pinko
     <a href="https://www.facebook.com/RegionalFunerals"><i class="fa fa-facebook"></i></a> <!-- Correct Facebook link -->
     <a href="#"><i class="fa fa-twitter"></i></a>
     <a href="#"><i class="fa fa-instagram"></i></a>
-    <a href="https://wa.me/27478328289"><i class="fa fa-whatsapp"></i></a> <!-- Correct WhatsApp link -->
+    <a href="https://wa.me/27748328289"><i class="fa fa-whatsapp"></i></a> <!-- Correct WhatsApp link -->
 </div>
                 </div>
             </div>
@@ -653,6 +648,18 @@ https://templatemo.com/tm-535-softy-pinko
             });
             element.querySelector('.features-small-item').classList.toggle('expanded');
         }
+
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('show'); // Toggle the 'show' class
+        });
+    </script>
+    <script>
+        // Mobile menu toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('show');
+        });
     </script>
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>

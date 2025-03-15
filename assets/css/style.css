@@ -389,17 +389,13 @@ header
 }
 
 .header-area .main-nav {
-  background: #fff;
-  border-radius: 40px;
-  padding: 0px 30px;
-  height: 80px;
-  max-width: 1200px;
-  margin: auto;
+  background: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  min-height: 80px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header-area .main-nav .logo {
@@ -420,25 +416,15 @@ header
 }
 
 .header-area .main-nav .nav {
-  float: right;
-  margin-top: 27px;
-  margin-left: 0px;
-  margin-right: 30px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  position: relative;
-  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
 }
 
 .header-area .main-nav .nav li {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header-area .main-nav .nav li:last-child {
-  padding-right: 0px;
+  margin: 0 15px;
 }
 
 .header-area .main-nav .nav li a {
@@ -446,19 +432,14 @@ header
   font-weight: 500;
   font-size: 13px;
   color: #1e1e1e;
-
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  height: 40px;
-  line-height: 40px;
-  border: transparent;
-  letter-spacing: 1px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
 }
 
 .header-area .main-nav .nav li a:hover {
-  color: var(--primary-blue);
+  background: #f0f0f0;
+  color: #1f69c4;
 }
 
 .header-area .main-nav .menu-trigger {
@@ -682,7 +663,7 @@ welcome
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../images/home.png);
+  background-image: url(../images/home1.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; 
@@ -1753,13 +1734,13 @@ preloader
         display: block;
         width: 100%;
         text-align: center;
-        padding: 5px 0;
+        padding: 15px 0;
     }
 
     .menu-trigger {
         position: absolute;
-        right: 15px;
-        top: 25px;
+        right: 30px;
+        top: 30px;
     }
 }
 
@@ -1844,4 +1825,264 @@ preloader
 .requirement-item i {
     color: green; /* Color for the tick icon */
     margin-right: 10px; /* Space between icon and text */
+}
+
+/* Add this to your existing CSS */
+.main-nav .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-trigger {
+    display: none;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .main-nav .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        padding: 0;
+    }
+
+    .main-nav .nav.show {
+        display: flex;
+    }
+
+    .main-nav .nav li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-trigger {
+        display: block;
+    }
+}
+
+/* General Styles for Contact Section */
+.contact-section {
+    padding: 100px 0; /* Space around the contact section */
+}
+
+.section-header {
+    text-align: center; /* Center the header text */
+    margin-bottom: 50px; /* Space below the header */
+}
+
+.section-header h2 {
+    color: var(--dark-brown); /* Use the same color as other headers */
+    font-size: 2.5rem; /* Consistent font size */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+.section-header p {
+    color: var(--secondary-brown); /* Use the same color for paragraph text */
+    font-size: 1.1rem; /* Consistent font size */
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Contact Grid Styles */
+.contact-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between items */
+    margin-bottom: 60px; /* Space below the grid */
+}
+
+.contact-box {
+    background: white; /* White background for contact boxes */
+    padding: 30px; /* Padding inside the boxes */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 20px rgba(31, 105, 196, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center; /* Center text inside boxes */
+}
+
+.contact-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    background: var(--primary-blue); /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.contact-box h3 {
+    color: var(--dark-brown); /* Consistent header color */
+    margin-bottom: 20px; /* Space below the header */
+    font-size: 1.4rem; /* Consistent font size */
+    font-weight: 600; /* Bold font weight */
+}
+
+/* Zimbabwe Grid Styles */
+.zimbabwe-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 25px; /* Space between items */
+    margin-top: 40px; /* Space above the grid */
+}
+
+.location-box {
+    background: white; /* White background for location boxes */
+    padding: 25px; /* Padding inside the boxes */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.08); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.location-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    background: var(--primary-brown); /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.location-box h4 {
+    color: var(--dark-brown); /* Consistent header color */
+    margin-bottom: 15px; /* Space below the header */
+    font-size: 1.2rem; /* Consistent font size */
+    font-weight: 600; /* Bold font weight */
+}
+
+/* Contact Item Styles */
+.contact-item {
+    display: flex; /* Flex layout for icons and text */
+    align-items: center; /* Center items vertically */
+    margin: 12px 0; /* Space between items */
+    color: var(--dark-brown); /* Consistent text color */
+}
+
+.contact-item i {
+    margin-right: 15px; /* Space between icon and text */
+    color: var(--accent-blue); /* Icon color */
+    width: 20px; /* Fixed width for icons */
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex; /* Flex layout for form */
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Space between form elements */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.contact-form button {
+    background-color: var(--primary-blue); /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease; /* Smooth transition for hover */
+}
+
+.contact-form button:hover {
+    background-color: #155a8a; /* Darker background on hover */
+}
+
+/* Map Box Styles */
+.map-box {
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 5px 20px rgba(139, 69, 19, 0.1); /* Subtle shadow for depth */
+}
+
+.map-box h3 {
+    color: var(--dark-brown); /* Consistent header color */
+    margin-bottom: 20px; /* Space below the header */
+    font-size: 1.4rem; /* Consistent font size */
+    font-weight: 600; /* Bold font weight */
+}
+
+.map-box iframe {
+    width: 100%; /* Full width for iframe */
+    height: 400px; /* Fixed height */
+    border: 0; /* No border */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .contact-form-map {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem; /* Smaller font size for headers */
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    }
+}
+@media (max-width: 991px) {
+  .header-area .main-nav .nav {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+  }
+
+  .header-area .main-nav .nav.show {
+    display: block;
+  }
+
+  .header-area .main-nav .nav li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .header-area .main-nav .nav li:last-child {
+    border-bottom: none;
+  }
+
+  .header-area .main-nav .nav li a {
+    padding: 15px 20px;
+    display: block;
+    color: #1e1e1e;
+  }
+
+  .header-area .main-nav .nav li a:hover {
+    background: #f8f8f8;
+  }
+
+  .menu-trigger {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+  }
+}
+
+.nav {
+    display: none; /* Hide by default */
+}
+.nav.show {
+    display: flex; /* Show when the 'show' class is added */
 }

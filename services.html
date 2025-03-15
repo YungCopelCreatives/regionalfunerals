@@ -124,16 +124,16 @@
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
+                        <ul class="nav" id="navMenu">
                             <li><a href="index.html#welcome">Home</a></li>
                             <li><a href="index.html#features">About</a></li>
                             <li><a href="products.html">Products</a></li>
                             <li><a href="services.html" class="active">Services</a></li>
                             <li><a href="burial_schemes.html">Burial Schemes</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="contacts.html">Contact Us</a></li>
                         </ul>
 
-                        <a class='menu-trigger'>
+                        <a class='menu-trigger' id="menuToggle">
                             <span>Menu</span>
                         </a>
                     </nav>
@@ -242,7 +242,7 @@
                         <li><a href="products.html">Products</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="burial_schemes.html">Burial Schemes</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contacts.html">Contact Us</a></li>
                     </ul>
                 </div>
     
@@ -251,7 +251,7 @@
                     <h4>Contact Info</h4>
                     <ul class="contact-info">
                         <li><i class="fa fa-map-marker"></i> 76 Alexander Street<br>Berea, Johannesburg</li>
-                        <li><i class="fa fa-phone"></i> +27 11 234 5678</li>
+                        <li><i class="fa fa-phone"></i> +27 11 484 0161</li>
                         <li><i class="fa fa-envelope"></i> info@regionalfunerals.co.za</li>
                         <li><i class="fa fa-clock-o"></i> Available 24/7</li>
                     </ul>
@@ -265,7 +265,7 @@
                         <a href="https://www.facebook.com/RegionalFunerals"><i class="fa fa-facebook"></i></a> <!-- Correct Facebook link -->
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="https://wa.me/27478328289"><i class="fa fa-whatsapp"></i></a> <!-- Correct WhatsApp link -->
+                        <a href="https://wa.me/27748328289"><i class="fa fa-whatsapp"></i></a> <!-- Correct WhatsApp link -->
                     </div>
                 </div>
             </div>
@@ -276,5 +276,12 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Mobile menu toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>

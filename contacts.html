@@ -1,230 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Added missing Bootstrap CSS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"> <!-- Added Bootstrap -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Contact Us - Regional Funerals</title>
-    <style>
-        .contact-section {
-            padding: 100px 0;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-        
-        .contact-box {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(31, 105, 196, 0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        
-        .contact-box:hover {
-            transform: translateY(-5px);
-            background: var(--primary-blue);
-            color: white;
-        }
-        
-        .contact-box h3 {
-            color: var(--dark-brown);
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
-        
-        .contact-box:hover h3,
-        .contact-box:hover p,
-        .contact-box:hover i {
-            color: white;
-        }
-        
-        .zimbabwe-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .location-box {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .location-box:hover {
-            transform: translateY(-5px);
-            background: var(--primary-brown);
-            color: white;
-        }
-
-        .location-box h4 {
-            color: var(--dark-brown);
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .location-box:hover h4 {
-            color: white;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin: 12px 0;
-            color: var(--dark-brown);
-        }
-
-        .contact-item i {
-            margin-right: 15px;
-            color: var(--accent-blue);
-            width: 20px;
-        }
-
-        .contact-form-map {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .contact-form button {
-            background-color: var(--primary-blue);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .contact-form button:hover {
-            background-color: #155a8a;
-        }
-
-        .map-box {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(139, 69, 19, 0.1);
-        }
-
-        .map-box h3 {
-            color: var(--dark-brown);
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .map-box iframe {
-            width: 100%;
-            height: 400px;
-            border: 0;
-            border-radius: 8px;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-header h2 {
-            color: var(--dark-brown);
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .section-header p {
-            color: var(--secondary-brown);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 992px) {
-            .contact-form-map {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .section-header h2 {
-                font-size: 2rem;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        footer {
-            padding: 40px 0;
-            background-color: #f8f8f8;
-        }
-
-        .footer-logo {
-            max-width: 100%;
-        }
-
-        .footer .social a {
-            margin-right: 15px;
-        }
-    </style>
+    <title>Contacts - Regional Funerals</title>
 </head>
 <body>
+    <!-- Fixed Navbar Structure -->
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav" style="display: flex; justify-content: center; align-items: center;">
-                        <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
                             <img src="assets/images/logo-1.png" alt="Regional Funerals" />
                         </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a href="index.html#welcome">Home</a></li>
+                        <ul class="nav" id="navMenu">
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="index.html#features">About</a></li>
                             <li><a href="products.html">Products</a></li>
                             <li><a href="services.html">Services</a></li>
                             <li><a href="burial_schemes.html">Burial Schemes</a></li>
-                            <li><a href="contact.html" class="active">Contact Us</a></li>
+                            <li><a href="contacts.html" class="active">Contact Us</a></li>
                         </ul>
-                        <a class='menu-trigger'>
+                        <a class='menu-trigger' id="menuToggle">
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>  
         </div>
     </header>
+
     <section class="contact-section">
         <div class="container">
             <div class="section-header">
@@ -252,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="zimbabwe-grid">
+            <div class="zimbabwe-grid" style="margin-top: 40px;">
                 <div class="location-box">
                     <h4>Bulawayo</h4>
                     <p class="contact-item">
@@ -319,8 +130,8 @@
                 </div>
             </div>
 
-            <div class="contact-form-map">
-                <div class="contact-box">
+            <div class="contact-form-map" style="display: flex; justify-content: space-between; gap: 20px;">
+                <div class="contact-box" style="flex: 1; min-width: 300px;">
                     <h3>Send Us a Message</h3>
                     <form class="contact-form" id="contactForm" method="POST" action="/submit-form" aria-label="Contact form">
                         <input type="text" name="name" placeholder="Your Name" required aria-required="true">
@@ -331,19 +142,30 @@
                     </form>
                 </div>
 
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4326.241148869397!2d28.054761476122806!3d-26.185697177087974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c2e306b16cd%3A0x31bfb8e1aedf3271!2s76%20Alexandra%20St%2C%20Berea%2C%20Johannesburg%2C%202198!5e1!3m2!1sen!2sza!4v1741785932412!5m2!1sen!2sza" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-box" style="flex: 1; min-width: 300px;">
+                    <h3>Find Us Here</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4326.241148869397!2d28.054761476122806!3d-26.185697177087974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c2e306b16cd%3A0x31bfb8e1aedf3271!2s76%20Alexandra%20St%2C%20Berea%2C%20Johannesburg%2C%202198!5e1!3m2!1sen!2sza!4v1741785932412!5m2!1sen!2sza" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Fixed Footer Consistency -->
     <footer>
         <div class="container">
             <div class="row">
                 <!-- Logo and About -->
                 <div class="col-lg-3 col-md-6">
                     <img src="assets/images/logo-1.png" alt="Regional Funerals" class="footer-logo">
-                    <p>Providing dignified funeral services with care and compassion since 2004.</p>
+                    <p>Providing dignified funeral services with care and compassion since 20o4.</p>
                     <p class="fsp-notice">Regional Funerals is an authorised financial services provider with FSP No. 52758.</p>
                 </div>
 
@@ -355,7 +177,7 @@
                         <li><a href="products.html">Products</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="burial_schemes.html">Burial Schemes</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contacts.html">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -378,7 +200,7 @@
                         <a href="https://www.facebook.com/RegionalFunerals"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="https://wa.me/27478328289"><i class="fa fa-whatsapp"></i></a>
+                        <a href="https://wa.me/27748328289"><i class="fa fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -389,5 +211,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- Added missing Bootstrap JS -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+   <script>
+    // Mobile menu toggle functionality
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        const navMenu = document.getElementById('navMenu');
+        navMenu.classList.toggle('show');
+    });
+</script>
+    </script>
 </body>
 </html>
