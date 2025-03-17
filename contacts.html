@@ -133,12 +133,30 @@
             <div class="contact-form-map" style="display: flex; justify-content: space-between; gap: 20px;">
                 <div class="contact-box" style="flex: 1; min-width: 300px;">
                     <h3>Send Us a Message</h3>
-                    <form class="contact-form" id="contactForm" method="POST" action="/submit-form" aria-label="Contact form">
-                        <input type="text" name="name" placeholder="Your Name" required aria-required="true">
-                        <input type="email" name="email" placeholder="Your Email" required aria-required="true">
-                        <input type="tel" name="phone" placeholder="Your Phone Number" pattern="[0-9+\s-()]*">
-                        <textarea name="message" placeholder="Your Message" rows="5" required aria-required="true"></textarea>
-                        <button type="submit" class="main-button">Send Message</button>
+                    <form action="mailer.php" method="post" id="contactForm">
+                        <fieldset>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="number">Phone Number:</label>
+                                    <input type="tel" id="number" name="number" required placeholder="Enter your phone number">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="enquiry">Your Enquiry:</label>
+                                <textarea id="enquiry" name="enquiry" required placeholder="Type your message here"></textarea>
+                            </div>
+
+                            <button type="submit">Send</button>
+                        </fieldset>
                     </form>
                 </div>
 
@@ -225,5 +243,8 @@
     });
 </script>
     </script>
+
+    <!-- Include the reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
