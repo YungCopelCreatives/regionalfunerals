@@ -1834,33 +1834,52 @@ preloader
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-    .main-nav .nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: white;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        padding: 0;
-    }
+  .header-area .main-nav ul.nav {
+      position: absolute;
+      top: 80px; /* Adjust based on header height */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 300px; /* Optional: Set a max-width */
+      background-color: #fff;
+      padding: 0;
+      margin: 0;
+      z-index: 999;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: none;
+  }
 
-    .main-nav .nav.show {
-        display: flex;
-    }
+  .header-area .main-nav ul.nav.show {
+      display: block;
+  }
 
-    .main-nav .nav li {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
+  .header-area .main-nav ul.nav li {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+  }
 
-    .menu-trigger {
-        display: block;
-    }
+  .header-area .main-nav ul.nav li a {
+      padding: 15px 20px;
+      display: block;
+      border-bottom: 1px solid #eee;
+  }
+
+  .menu-trigger {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+      z-index: 1000;
+  }
+
+  .header-area .main-nav .logo {
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+  }
 }
-
 /* General Styles for Contact Section */
 .contact-section {
     padding: 100px 0; /* Space around the contact section */
