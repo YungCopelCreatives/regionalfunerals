@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $enquiry = htmlspecialchars(trim($_POST['enquiry']));
 
     // Email details
-    $to = "regionalfunerlsoffice@gmail.com"; // Change to your email address
+    $to = "regionalfuneralsoffice@gmail.com";
     $subject = "New Contact Form Submission";
     $message = "You have received a new submission:\n\n" .
                "Name: $name\n" .
@@ -16,8 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                "Enquiry: $enquiry\n";
 
     // Additional headers
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
+    $safeFrom = "no-reply@regionalfunerals.co.za";
+    $headers = "From: Regional Funerals <{$safeFrom}>\r\n";
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $headers .= "Reply-To: {$email}\r\n";
+    }
 
     // Send the email
     if (mail($to, $subject, $message, $headers)) {

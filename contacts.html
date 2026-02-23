@@ -7,20 +7,51 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"> <!-- Added Bootstrap -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> <!-- For .ico files -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Regional Funerals" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://regionalfunerals.co.za/contacts.html" />
     
     <title>Contacts - Regional Funerals |  Funeral Cover | Affordable Cover | Zimbabwe Funeral Services</title>
+
+    <!-- SEO & Social Meta Tags -->
+    <meta name="description" content="Regional Funerals - Contact us for compassionate support and information about our funeral services and products." />
+    <meta property="og:title" content="Regional Funerals - Contact" />
+    <meta property="og:description" content="Contact us for compassionate support and information about our funeral services and products." />
+    <meta property="og:image" content="https://regionalfunerals.co.za/assets/images/logo-1.png" />
+    <meta property="og:url" content="https://regionalfunerals.co.za/contacts.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Regional Funerals - Contact" />
+    <meta name="twitter:description" content="Contact us for compassionate support and information about our funeral services and products." />
+    <meta name="twitter:image" content="https://regionalfunerals.co.za/assets/images/logo-1.png" />
 </head>
 <body>
+    <!-- Hero Section Start -->
+    <section class="hero-section" style="width:100%;height:320px;overflow:hidden;position:relative;margin-bottom:40px;">
+        <img src="assets/images/otherpages_contact_us.jpg" alt="Contact Us Hero" width="1600" height="320" style="width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(31,105,196,0.3);"></div>
+        <div style="position:absolute;bottom:30px;left:30px;color:#fff;z-index:2;">
+            <h1 style="font-size:2.5rem;font-weight:700;">Contact Us</h1>
+            <p style="font-size:1.2rem;">We're here to help you in your time of need</p>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
     <!-- Fixed Navbar Structure -->
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <nav class="main-nav" style="display: flex; justify-content: center; align-items: center;">
+                    <nav class="main-nav" role="navigation" style="display: flex; justify-content: center; align-items: center;">
                         <a href="index.html" class="logo">
-                            <img src="assets/images/logo-1.png" alt="Regional Funerals" />
+                            <img src="assets/images/logo-1.png" alt="Regional Funerals Logo" />
                         </a>
                         <ul class="nav" id="navMenu">
                             <li><a href="index.html">Home</a></li>
@@ -28,9 +59,9 @@
                             <li><a href="products.html">Products</a></li>
                             <li><a href="services.html">Services</a></li>
                             <li><a href="burial_schemes.html">Burial Schemes</a></li>
-                            <li><a href="contacts.html" class="active">Contact Us</a></li>
+                            <li><a href="contacts.html" class="active" aria-current="page">Contact Us</a></li>
                         </ul>
-                        <a class='menu-trigger' id="menuToggle">
+                        <a class='menu-trigger' id="menuToggle" aria-label="Toggle navigation">
                             <span>Menu</span>
                         </a>
                     </nav>
@@ -55,7 +86,7 @@
 
                 <div class="contact-box">
                     <h3><i class="fas fa-envelope"></i> Email Us</h3>
-                    <p>regionalfuneralsoffice@gmail.com</p>
+                    <p><a href="mailto:regionalfuneralsoffice@gmail.com">regionalfuneralsoffice@gmail.com</a></p>
                 </div>
 
                 <div class="contact-box">
@@ -178,6 +209,11 @@
         </div>
     </section>
 
+    <!-- Add a random image placeholder after the contact grid -->
+    <div style="width:100%;margin:40px 0;text-align:center;">
+        <img src="https://placehold.co/900x200?text=Contact+Showcase" alt="Contact Showcase" style="width:90%;max-width:900px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+    </div>
+
     <!-- Fixed Footer Consistency -->
     <footer>
         <div class="container">
@@ -185,7 +221,7 @@
                 <!-- Logo and About -->
                 <div class="col-lg-3 col-md-6">
                     <img src="assets/images/logo-1.png" alt="Regional Funerals" class="footer-logo">
-                    <p>Providing dignified funeral services with care and compassion since 20o4.</p>
+                    <p>Providing dignified funeral services with care and compassion since 2004.</p>
                     <p class="fsp-notice">Regional Funerals is an authorised financial services provider with FSP No. 52758.</p>
                 </div>
 
@@ -207,7 +243,7 @@
                     <ul class="contact-info">
                         <li><i class="fa fa-map-marker"></i> 76 Alexander Street<br>Berea, Johannesburg</li>
                         <li><i class="fa fa-phone"></i> <a href="tel:+27114840161">011 484 0161</a></li>
-                        <li><i class="fa fa-envelope"></i> regionalfuneralsoffice@gmail.com</li>
+                        <li><i class="fa fa-envelope"></i> <a href="mailto:regionalfuneralsoffice@gmail.com">regionalfuneralsoffice@gmail.com</a></li>
                         <li><i class="fa fa-clock-o"></i> Available 24/7</li>
                     </ul>
                 </div>
@@ -227,7 +263,7 @@
 
             <!-- Copyright -->
             <div class="copyright text-center">
-                <p>© 2025 Regional Funerals. All Rights Reserved.</p>
+                <p>© 2026 Regional Funerals. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -245,8 +281,29 @@
     });
 </script>
     </script>
-
-    <!-- Include the reCAPTCHA script -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FuneralHome",
+      "name": "Regional Funerals",
+      "url": "https://regionalfunerals.co.za/",
+      "logo": "https://regionalfunerals.co.za/assets/images/logo-1.png",
+      "image": "https://regionalfunerals.co.za/assets/images/logo-1.png",
+      "telephone": "+27 11 484 0161",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "76 Alexander Street",
+        "addressLocality": "Berea",
+        "addressRegion": "Johannesburg",
+        "addressCountry": "ZA"
+      },
+      "openingHours": "Mo-Su 00:00-23:59",
+      "sameAs": [
+        "https://www.facebook.com/RegionalFunerals",
+        "https://wa.me/27748328289"
+      ],
+      "areaServed": ["South Africa", "Zimbabwe"]
+    }
+    </script>
 </body>
 </html>

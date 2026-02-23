@@ -17,7 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content .= "Message:\n$message\n";
 
     // Set the email headers
-    $headers = "From: $name <$email>";
+    $safeFrom = "no-reply@regionalfunerals.co.za";
+    $headers = "From: Regional Funerals <{$safeFrom}>";
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $headers .= "\r\nReply-To: {$email}";
+    }
 
     // Send the email
     if (mail($to, $subject, $email_content, $headers)) {
